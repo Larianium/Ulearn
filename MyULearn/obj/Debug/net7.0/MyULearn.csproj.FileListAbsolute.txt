@@ -1,0 +1,14 @@
+C:\Users\aleshkin\My projects\ulearn\MyULearn\bin\Debug\net7.0\MyULearn.exe
+C:\Users\aleshkin\My projects\ulearn\MyULearn\bin\Debug\net7.0\MyULearn.deps.json
+C:\Users\aleshkin\My projects\ulearn\MyULearn\bin\Debug\net7.0\MyULearn.runtimeconfig.json
+C:\Users\aleshkin\My projects\ulearn\MyULearn\bin\Debug\net7.0\MyULearn.dll
+C:\Users\aleshkin\My projects\ulearn\MyULearn\bin\Debug\net7.0\MyULearn.pdb
+C:\Users\aleshkin\My projects\ulearn\MyULearn\obj\Debug\net7.0\MyULearn.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleshkin\My projects\ulearn\MyULearn\obj\Debug\net7.0\MyULearn.AssemblyInfoInputs.cache
+C:\Users\aleshkin\My projects\ulearn\MyULearn\obj\Debug\net7.0\MyULearn.AssemblyInfo.cs
+C:\Users\aleshkin\My projects\ulearn\MyULearn\obj\Debug\net7.0\MyULearn.csproj.CoreCompileInputs.cache
+C:\Users\aleshkin\My projects\ulearn\MyULearn\obj\Debug\net7.0\MyULearn.dll
+C:\Users\aleshkin\My projects\ulearn\MyULearn\obj\Debug\net7.0\refint\MyULearn.dll
+C:\Users\aleshkin\My projects\ulearn\MyULearn\obj\Debug\net7.0\MyULearn.pdb
+C:\Users\aleshkin\My projects\ulearn\MyULearn\obj\Debug\net7.0\MyULearn.genruntimeconfig.cache
+C:\Users\aleshkin\My projects\ulearn\MyULearn\obj\Debug\net7.0\ref\MyULearn.dll
