@@ -31,6 +31,49 @@ reverseDigitNaturNumb = numb3 * hundreds + numb2 * dozen + numb1;
 
 Console.WriteLine($"Первоначальное трёхзначное число: {threeDigitNaturNumb}, Число в обратном порядке - {reverseDigitNaturNumb}");
 
+//Задача 3: Задано время Н часов (ровно). Вычислить угол в градусах между часовой и минутной стрелками. Например, 5 часов -> 150 градусов, 20 часов -> 120 градусов. Не использовать циклы.
+int hours = 20,
+    minutes = 35,
+    hoursCalc = 0,
+    minutesCalc = 0,
+    hoursConst = 6,
+    minutesConst = 30,
+    degreeMinConst,
+    degreeHourConst,
+    degreeMin,
+    degreeHour,
+    degreeAll;
+
+degreeMinConst = 180 / minutesConst;
+degreeHourConst = 180 / hoursConst;
+
+if(minutes > minutesConst)
+    minutesCalc = minutesConst - (minutes - minutesConst);
+
+if(minutesCalc == 0)
+   degreeMin = degreeMinConst;
+else    
+    degreeMin = degreeMinConst * minutesCalc;
+
+if(hours > hoursConst && hours <= 12 || hours > 18)
+    hoursCalc = hoursConst - (hours % hoursConst);
+
+if(hours > 12 && hours <= 18 )
+    hoursCalc = hours % hoursConst;
+
+if(hoursCalc == 0)
+    degreeHour = degreeHourConst;
+else
+    degreeHour = degreeHourConst * hoursCalc;
+
+if(degreeHour > degreeMin)
+    degreeAll = degreeHour - degreeMin;
+else
+    degreeAll = degreeMin - degreeHour;
+
+ Console.WriteLine($"Часы: {hours}, Минуты: {minutes}, Угол: {degreeAll}");   
+
+
 
 
 
