@@ -15,63 +15,42 @@ Console.WriteLine($"После: Значение 1 - {value_1}, Значение
 
 //Задача 2: Задается натуральное трехзначное число (гарантируется, что трехзначное). Развернуть его, т.е. получить трехзначное число, записанное теми же цифрами в обратном порядке.
 int threeDigitNaturNumb = 719,
-    numb1,
-    numb2,
-    numb3,
     dozen = 10, 
-    hundreds = 100,   
-    reverseDigitNaturNumb;
+    hundreds = 100;
 
+Console.WriteLine($"Первоначальное трёхзначное число: {threeDigitNaturNumb}");
 
-numb1 = threeDigitNaturNumb / hundreds;
-numb2 = threeDigitNaturNumb % hundreds / dozen;
-numb3 = threeDigitNaturNumb % dozen;
+threeDigitNaturNumb =   (threeDigitNaturNumb % dozen * hundreds) 
+                        + (threeDigitNaturNumb / dozen % dozen * dozen) 
+                        + (threeDigitNaturNumb / hundreds);
 
-reverseDigitNaturNumb = numb3 * hundreds + numb2 * dozen + numb1;
-
-Console.WriteLine($"Первоначальное трёхзначное число: {threeDigitNaturNumb}, Число в обратном порядке - {reverseDigitNaturNumb}");
+Console.WriteLine($"Число в обратном порядке - {threeDigitNaturNumb}");
 
 //Задача 3: Задано время Н часов (ровно). Вычислить угол в градусах между часовой и минутной стрелками. Например, 5 часов -> 150 градусов, 20 часов -> 120 градусов. Не использовать циклы.
-int hours = 20,
-    minutes = 35,
-    hoursCalc = 0,
-    minutesCalc = 0,
-    hoursConst = 6,
-    minutesConst = 30,
-    degreeMinConst,
-    degreeHourConst,
-    degreeMin,
-    degreeHour,
-    degreeAll;
+int     hours = 12,
+        minutes = 15;             
+                
+double  degreeHour,
+        degreeHourConst,
+        degreeAll,
+        minutesConst = 60,
+        hoursConst = 12,
+        degreeMinConst,
+        degreeMin;
 
-degreeMinConst = 180 / minutesConst;
-degreeHourConst = 180 / hoursConst;
+degreeMinConst = 360 / minutesConst;
+degreeMin = (minutes % 60) * degreeMinConst;
 
-if(minutes > minutesConst)
-    minutesCalc = minutesConst - (minutes - minutesConst);
+degreeHourConst = 360 / hoursConst;
+degreeHour =  (hours % 12) * degreeHourConst 
+            + (minutes / minutesConst) * degreeHourConst; //осуществляя деление заданных минут на общее количество минут в часе, 
+                                                          //получаем часть пройденного пути часовой стрелки за указанное время
+                                                          //далее умножаем на часовой градус, чтобы получить дополнительный градус к пройденному пути часовой стрелки
 
-if(minutesCalc == 0)
-   degreeMin = degreeMinConst;
-else    
-    degreeMin = degreeMinConst * minutesCalc;
+degreeAll = Math.Abs(degreeHour - degreeMin);
+degreeAll = Math.Min(degreeAll, 360 - degreeAll);
 
-if(hours > hoursConst && hours <= 12 || hours > 18)
-    hoursCalc = hoursConst - (hours % hoursConst);
-
-if(hours > 12 && hours <= 18 )
-    hoursCalc = hours % hoursConst;
-
-if(hoursCalc == 0)
-    degreeHour = degreeHourConst;
-else
-    degreeHour = degreeHourConst * hoursCalc;
-
-if(degreeHour > degreeMin)
-    degreeAll = degreeHour - degreeMin;
-else
-    degreeAll = degreeMin - degreeHour;
-
- Console.WriteLine($"Часы: {hours}, Минуты: {minutes}, Угол: {degreeAll}");   
+Console.WriteLine($"Часы: {hours}, Минуты: {minutes}, Угол: {degreeAll}");   
 
 
 
