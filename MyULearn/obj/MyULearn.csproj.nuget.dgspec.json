@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\MyULearn.csproj": {}
+    "C:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\MyULearn.csproj": {}
   },
   "projects": {
-    "c:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\MyULearn.csproj": {
+    "C:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\MyULearn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\MyULearn.csproj",
+        "projectUniqueName": "C:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\MyULearn.csproj",
         "projectName": "MyULearn",
-        "projectPath": "c:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\MyULearn.csproj",
+        "projectPath": "C:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\MyULearn.csproj",
         "packagesPath": "C:\\Users\\aleshkin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\obj\\",
+        "outputPath": "C:\\Users\\aleshkin\\My projects\\Ulearn\\MyULearn\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aleshkin\\AppData\\Roaming\\NuGet\\NuGet.Config"

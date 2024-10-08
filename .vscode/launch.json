@@ -6,18 +6,19 @@
     "configurations": [
         {
             "name": "C#: MyULearn",  // Имя конфигурации
-            "type": "dotnet",  // Указывает на использование .NET Core
+            //"type": "dotnet",  // Указывает на использование .NET Core
+            "type": "coreclr",  // Указывает на использование .NET Core
             "request": "launch",  // Тип запроса: запуск            
-            "projectPath": "${workspaceFolder}\\MyULearn\\MyULearn.csproj",
-            "launchConfigurationId": "TargetFramework=;MyULearn"
-            //"preLaunchTask": "build",  // Выполняет сборку проекта перед запуском
-            // "program": "${workspaceFolder}/bin/Debug/net6.0/YourProjectName.dll",  // Путь к исполняемому файлу
-            // "args": [],  // Аргументы для программы
-            // "cwd": "${workspaceFolder}",  // Текущая рабочая директория
-            // "stopAtEntry": false,  // Остановка на точке входа
-            // "console": "internalConsole",  // Использовать встроенную консоль для вывода
-            // "logging": { "moduleLoad": false },
-            // "internalConsoleOptions": "openOnSessionStart"  // Открыть консоль при запуске
+            //"projectPath": "${workspaceFolder}\\MyULearn\\MyULearn.csproj",
+            //"launchConfigurationId": "TargetFramework=;MyULearn"
+             "preLaunchTask": "build",  // Выполняет сборку проекта перед запуском
+             "program": "${workspaceFolder}/MyULearn/bin/Debug/net7.0/MyULearn.dll",  // Путь к исполняемому файлу
+             "args": [],  // Аргументы для программы
+             "cwd": "${workspaceFolder}",  // Текущая рабочая директория
+             "stopAtEntry": false,  // Остановка на точке входа
+             "console": "internalConsole",  // Использовать встроенную консоль для вывода
+             "logging": { "moduleLoad": false },
+             "internalConsoleOptions": "openOnSessionStart"  // Открыть консоль при запуске
         }
     ]
 }

@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build", // Название задачи
+            "command": "dotnet", // Команда для выполнения
+            //"type": "shell", // Тип задачи
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/MyULearn/MyULearn.csproj",  // Явный путь к файлу проекта .csproj
+                // Ask dotnet build to generate full paths for file names.
+                "/property:GenerateFullPaths=true", // Генерация полных путей для файлов
+                // Do not generate summary otherwise it leads to duplicate errors in Problems panel
+                "/consoleloggerparameters:NoSummary" // Отключение итогов компиляции
+            ],
+            "group": {
+                "kind": "build",  // Указание, что это задача сборки
+                "isDefault": true  // Указание на то, что это задача по умолчанию для сборки
+            },
+            "presentation": {
+                "reveal": "silent" // Скрывать вывод
+            },
+            "problemMatcher": "$msCompile" // Обработка ошибок компиляции
+        }
+    ]
+}

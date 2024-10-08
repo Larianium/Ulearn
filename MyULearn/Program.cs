@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+using System.Drawing;
 //Задача 1: Как поменять местами значения двух переменных? Можно ли это сделать без ещё одной временной переменной. Стоит ли так делать?
 int value_1 = 10020;
 int value_2 = 15000;
@@ -111,4 +111,21 @@ static int CountLeapYears(int year)
 Console.WriteLine($"Количество високосных годов в периоде: {count}"); 
 
 
+// Задача 6: Посчитать расстояние от точки до прямой, заданной двумя разными точками.
 
+static double DistanceFromPointToLine(double x1, double y1, double x2, double y2, double x3, double y3)
+{
+    double aPoint = y2 - y1,
+           bPoint = x1 - x2,
+           cPoint = x2 * y1 - x1 * y2,
+           distance;
+
+    distance = Math.Abs(aPoint * x3 + bPoint * y3 + cPoint)/Math.Sqrt(Math.Pow(aPoint, 2) + Math.Pow(bPoint, 2));
+    return distance;
+}
+
+
+Console.WriteLine($"Дистанция от точки cPoint до прямой = {DistanceFromPointToLine(1, 2, 3, 6, 4, 5)}"); 
+
+
+// Задача 6: Найти вектор, параллельный прямой. Перпендикулярный прямой. Прямая задана коэффициентами уравнения прямой.
