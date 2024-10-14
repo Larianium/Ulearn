@@ -129,3 +129,35 @@ Console.WriteLine($"Дистанция от точки cPoint до прямой 
 
 
 // Задача 6: Найти вектор, параллельный прямой. Перпендикулярный прямой. Прямая задана коэффициентами уравнения прямой.
+
+    // Коэффициенты прямой Ax + By + C = 0
+    double A = 2, B = 3;
+    
+    // Параллельный вектор
+    var parallelVector = FindParallelVector(A, B);
+    Console.WriteLine($"Параллельный вектор: ({parallelVector.Item1}, {parallelVector.Item2})");
+    
+    // Перпендикулярный вектор
+    var perpendicularVector = FindPerpendicularVector(A, B);
+    Console.WriteLine($"Перпендикулярный вектор: ({perpendicularVector.Item1}, {perpendicularVector.Item2})");
+
+    // Метод для нахождения параллельного вектора
+    static (double, double) FindParallelVector(double A, double B)
+    {
+        return (B, -A);  // Параллельный вектор
+    }
+
+    // Метод для нахождения перпендикулярного вектора
+    static (double, double) FindPerpendicularVector(double A, double B)
+    {
+        return (A, B);  // Перпендикулярный вектор
+    }
+
+// Задача 6: Дана прямая L и точка A. Найти точку пересечения прямой L с перпендикулярной ей прямой P, проходящей через точку A. Можете считать, 
+//что прямая задана либо двумя точками, либо коэффициентами уравнения прямой — как вам удобнее.
+
+
+
+
+
+
